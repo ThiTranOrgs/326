@@ -21,9 +21,13 @@ on:
       #   required: true
 
 jobs:
-  jobs:
-    call-filter-workflow:
-      uses: ThiTranOrgs/MiddleRepository/.github/workflows/filter.yml@e4aab2e7d672a18d85bdf6ad208c8154990795b7
+  do-it:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+  call-filter-workflow:
+    uses: ThiTranOrgs/MiddleRepository/.github/workflows/filter.yml@e4aab2e7d672a18d85bdf6ad208c8154990795b7
   # log-the-inputs:
   #   runs-on: ubuntu-latest
   #   steps:
